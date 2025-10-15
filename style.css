@@ -1,0 +1,277 @@
+/* -------------------------
+   GLOBAL STYLES
+-------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Serif', serif;
+  background-color: #081b33;
+  color: #fff;
+  line-height: 1.6;
+}
+
+
+/* -------------------------
+   NAVBAR
+-------------------------- */
+header {
+  background-color: #0b274d;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2.5rem; 
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 70px; 
+  font-family: 'Playfair Display', serif;
+
+  background: linear-gradient(135deg, #f4c430, #c73f09);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+  gap: 3rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #f4c430;
+}
+
+.nav-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  gap: 1.4rem;
+  padding-right: 70px; 
+}
+
+.nav-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.icon-img:hover {
+  transform: scale(1.15);
+  filter: brightness(0) saturate(100%) invert(64%) sepia(62%) saturate(495%) hue-rotate(10deg) brightness(95%) contrast(90%);
+}
+
+.burger {
+  display: none;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+
+/* -------------------------
+   HERO SECTION (Full-Width Layout)
+-------------------------- */
+.hero {
+  background-color: #081b33;
+  padding: 6rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1600px; 
+  gap: 6rem;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hero-image img {
+  width: 500px; 
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
+.hero-text {
+  flex: 1.2;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  color: #f4c430;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.hero-text p {
+  font-size: 1.15rem;
+  color: #ddd;
+  margin-bottom: 0.7rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-text .btn {
+  display: inline-block;
+  margin-top: 2rem;
+  background: #f4c430;
+  color: #081b33;
+  padding: 0.9rem 1.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.hero-text .btn:hover {
+  background: #d4a010;
+}
+
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-image {
+    justify-content: center;
+  }
+
+  .hero-image img {
+    width: 75%;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-text p {
+    max-width: 100%;
+  }
+}
+
+
+/* -------------------------
+   FOOTER
+-------------------------- */
+footer {
+  background-color: #0b274d;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+  color: #d4af37;
+}
+
+footer .socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer .socials a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+footer .socials a:hover {
+  transform: scale(1.1);
+}
+
+.social-icon {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+
+/* -------------------------
+   RESPONSIVE NAV
+-------------------------- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #0b274d;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .nav-icons {
+    display: none;
+  }
+}
