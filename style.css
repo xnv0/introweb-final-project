@@ -275,3 +275,568 @@ footer .socials a:hover {
     display: none;
   }
 }
+
+
+/* -------------------------
+   PAGE CONTENT (About, Services, Products)
+-------------------------- */
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+section h2 {
+  color: white;
+  font-size: 20px;
+}
+
+section p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.product-item img:first-of-type {
+  width: 100%;
+  max-width: 250px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.price-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.add-to-cart {
+  width: 200px;
+  background: linear-gradient(135deg, #d4af37, #434343);
+  color: white;
+  border: none;
+  padding: 12px 0;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background: linear-gradient(135deg, #d4af37, #000000);
+  transform: scale(1.02);
+}
+
+.price-cart {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  color: #d4af37;
+}
+
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);     
+  gap: 50px;                              
+  justify-items: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0rem 1rem;
+} 
+
+.price-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  color: #d4af37;
+}
+
+
+.product-cart:hover {
+  transform: scale(1.1);
+  filter: brightness(0) saturate(100%) invert(64%) sepia(62%) saturate(495%) hue-rotate(10deg) brightness(95%) contrast(90%);
+}
+
+
+/* -------------------------
+   PAYMENT PAGE LAYOUT
+-------------------------- */
+.payment-section {
+  background: #081b33;
+  color: white;
+  padding: 3rem 2rem;
+}
+
+.payment-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.payment-left,
+.payment-right {
+  background: #0b274d;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  width: 45%;
+  min-width: 340px;
+}
+
+.payment-left h2,
+.payment-right h2 {
+  color: #f4c430;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+.payment-form label, .shipping-form label {
+  display: block;
+  margin: 0.5rem 0 0.2rem;
+  font-weight: 500;
+}
+
+.payment-form input,
+.shipping-form input {
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.small-inputs {
+  display: flex;
+  gap: 1rem;
+}
+
+.order-list-box {
+  margin-top: 2rem;
+  background: #f1f1f1;
+  color: #000;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.order-list-box h3 {
+  margin-bottom: 0.5rem;
+  color: #081b33;
+  font-size: 1.2rem;
+}
+
+.order-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.order-list img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.order-total {
+  margin-top: 0.5rem;
+  color: #444;
+}
+
+.clear-cart-btn {
+  background: #f4c430;
+  border: none;
+  color: #081b33;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-top: 0.6rem;
+  cursor: pointer;
+}
+
+.confirm-btn {
+  background: #f4c430;
+  color: #081b33;
+  font-weight: 700;
+  border: none;
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.confirm-btn:hover,
+.clear-cart-btn:hover {
+  background: #ffdd4a;
+}
+
+@media (max-width: 900px) {
+  .payment-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .payment-left, .payment-right {
+    width: 90%;
+  }
+}
+
+
+/* -------------------------
+          ABOUT PAGE
+-------------------------- */
+
+.about-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.about-section {
+  padding: 100px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-container {
+  max-width: 1000px;
+  text-align: center;
+}
+
+.about-text h1,
+.about-text h2 {
+  color: #f4c430; 
+  margin-bottom: 1rem;
+}
+
+.about-text h1 {
+  font-size: 2.5rem; 
+}
+
+.about-text h2 {
+  font-size: 2.2rem; 
+  margin-top: 2rem;
+}
+
+.about-text p {
+  font-size: 1.1rem; 
+  line-height: 1.8;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+
+/* -------------------------
+   LOGIN & SIGNUP PAGE
+-------------------------- */
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: #081b33;
+  color: #fff;
+}
+
+.login-box {
+  background: #0b274d;
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  width: 400px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.login-box h2 {
+  color: #f4c430;
+  margin-bottom: 1.5rem;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.7rem 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.login-box button {
+  width: 100%;
+  background: #f4c430;
+  color: #081b33;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-box button:hover {
+  background: #d4a010;
+}
+
+.login-box p {
+  margin-top: 1rem;
+  color: #ddd;
+}
+
+.login-box a {
+  color: #f4c430;
+  text-decoration: none;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
+}
+
+.message {
+  margin-top: 1rem;
+  color: #f4c430;
+  font-weight: bold;
+}
+
+/* ------------------------------------
+   MOBILE ICONS (Login & Cart in Menu)
+------------------------------------ */
+.mobile-icons {
+  display: none; 
+}
+
+.mobile-icons a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 6px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.mobile-icons a:hover {
+  color: #d4af37; 
+}
+
+@media (max-width: 900px) {
+  .mobile-icons {
+    display: flex !important;
+    flex-direction: column;
+    margin-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 8px;
+  }
+
+  .mobile-icons img.icon-img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1); 
+  }
+}
+
+/* -------------------------
+   MOBILE & TABLET (RESPONSIVE)
+   Append this to the END of your existing style.css
+-------------------------- */
+
+@media (max-width: 900px) {
+
+  .burger {
+    display: flex !important;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none !important;
+    position: absolute;
+    top: 90px; 
+    right: 0;
+    width: 240px;
+    background: #0b274d;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 12px;
+    gap: 12px;
+    border-left: 2px solid rgba(212,175,55,0.12);
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex !important;
+  }
+
+  .nav-icons {
+    display: none;
+  }
+
+  header .nav-links.active ~ .nav-icons,
+  header .nav-links.active + .nav-icons {
+    display: flex !important;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin-top: 8px;
+    background: transparent;
+    align-items: flex-start;
+  }
+
+  .nav-links a {
+    padding: 10px 8px;
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .nav-icons a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 6px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  header {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .payment-left, .payment-right, .login-box, .about-container, .product-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 70px;
+    border-left: none;
+  }
+
+  .nav-links a {
+    font-size: 1.05rem;
+  }
+
+  .product-item {
+    padding: 16px;
+  }
+
+  .product-grid {
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+.nav-links a:focus, .nav-icons a:focus, .add-to-cart:focus, .confirm-btn:focus {
+  outline: 2px dashed #d4af37;
+  outline-offset: 3px;
+}
+
+/* -------------------------
+   BURGER MENU (RESPONSIVE NAV)
+   Append this at the END of style.css
+-------------------------- */
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.burger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.active div:nth-child(2) {
+  opacity: 0;
+}
+.burger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile styles */
+@media (max-width: 900px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background: #0b274d;
+    width: 220px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px;
+    border-left: 2px solid rgba(212,175,55,0.2);
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .nav-links a:hover {
+    color: #d4af37;
+  }
+
+  .nav-icons {
+    display: none;
+  }
+}
